@@ -1,0 +1,38 @@
+
+@font-face {
+    font-family: 'Red Hat Text';
+    src: url('../assets/fonts/RedHatText-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root{
+
+    /* RED */
+    --red: #C73B0F;
+
+    /* ROSE */
+    --rose-900: #260F08;
+    --rose-500: #87635A;
+    --rose-400: #AD8A85;
+    --rose-300: #CAAFA7;
+    --rose-100: #F5EEEC;
+    --rose-50: #FCF8F6;
+
+    /* GREEN */
+    --green: #1EA575;
+
+    /* BLACK */
+    --black: #000000;
+    /* WHITE */
+    --white: #ffffff;
+
+    /* FONTS */
+    --ff-base: 'Red Hat Text', sans-serif;
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+}
+
