@@ -328,8 +328,8 @@
         </div>
       </li>
     </ul>
-      <!-- CART -->
-    <aside class="container__cart">
+    <!-- CART -->
+    <aside class="container__cart" data-state="idle">
       <!-- CART COUNT PRODUCT -->
       <div class="cart__title">
         <h2 class="cart__number">Your Cart (<span>0</span>)</h2>
@@ -338,6 +338,56 @@
       <div class="placeholder">
         <img src="/assets/images/illustration-empty-cart.svg" alt="empty placeholder">
         <p class="text__placeholder">Your added items will appear here</p>
+      </div>
+      <!-- PRODUCTS CONTAINER COUT -->
+      <div class="added__items">
+        <!-- ITEMS IN THE CART -->
+        <ul class="items">
+          <li class="item__cart">
+            <p class="added__title">Waffle with Berries</p>
+            <div class="quantity__price--cart">
+              <p class="quantity"><span aria-live="polite">1</span>x</p>
+              <p class="price">@$6.50</p>
+              <p class="quantity__price">$13.00</p>
+            </div>
+            <button class="remove__product" aria-label="Remove product">
+              <img src="/assets/images/icon-remove-item.svg" alt="">
+            </button>
+          </li>
+          <li class="item__cart">
+            <p class="added__title">Waffle with Berries</p>
+            <div class="quantity__price--cart">
+              <p class="quantity"><span aria-live="polite">1</span>x</p>
+              <p class="price">@$6.50</p>
+              <p class="quantity__price">$13.00</p>
+            </div>
+            <button class="remove__product" aria-label="Remove product">
+              <img src="/assets/images/icon-remove-item.svg" alt="">
+            </button>
+          </li>
+          <li class="item__cart">
+            <p class="added__title">Waffle with Berries</p>
+            <div class="quantity__price--cart">
+              <p class="quantity"><span aria-live="polite">1</span>x</p>
+              <p class="price">@$6.50</p>
+              <p class="quantity__price">$13.00</p>
+            </div>
+            <button class="remove__product" aria-label="Remove product">
+              <img src="/assets/images/icon-remove-item.svg" alt="">
+            </button>
+          </li>
+        </ul>
+        <!-- TOTAL ORDEN -->
+        <div class="total__items">
+          <p class="total__text">Order Total</p>
+          <p class="total">$13.00</p>
+        </div>
+        <!-- CARBON NEUTRAL TEXT -->
+        <div class="carbon__info">
+          <img src="/assets/images/icon-carbon-neutral.svg" alt="icon carbon neutral">
+          <p class="carbon__text">This is a <b class="info">carbon-neutral</b> delivery</p>
+        </div>
+        <button class="btn__confirm__order">Confirm Order</button>
       </div>
     </aside>
   </main>
