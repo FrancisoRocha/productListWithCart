@@ -1,0 +1,33 @@
+
+.container__cart{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 100%;
+    padding: 2.4rem;
+    border-radius: 1.2rem;
+    background-color: var(--white);
+}
+
+/** COUNTER CART **/
+.cart__number{
+    font-size: 2.4rem;
+    font-weight: 800;
+    text-align: left;
+    color: var(--red)
+}
+
+/** CART PLACEHOLDER **/
+.placeholder{
+    display: flex;
+    gap: 1.6rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text__placeholder{
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--rose-500);
+}

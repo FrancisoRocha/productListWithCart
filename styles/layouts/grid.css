@@ -1,0 +1,43 @@
+
+
+/**----LAYOUTS----**/
+/*----TABLET----*/
+@media(min-width: 768px){
+    .container{
+        padding: 4rem;
+    }
+    .product__container{
+        display: grid;
+        gap: 3.2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*-----DESKTOP----*/
+@media(min-width: 1440px){
+    .container{
+        padding: 8.8rem 4rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "title cart"
+            "products cart";
+        gap: 3.2rem;
+    }
+    .container__title{
+        grid-area: title;
+    }
+    .product__container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-area: products;
+    }
+    /** CART - alineado con el título **/
+    .container__cart{
+        grid-area: cart;
+        align-self: self-start;
+    }
+}
+
+

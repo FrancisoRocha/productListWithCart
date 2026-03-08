@@ -7,3 +7,9 @@
 /* LAYOUTS */
 @import url('./layouts/grid.css');
 
+/* Components */
+@import url('./components/card.css');
+@import url('./components/cart.css');
+@import url('./components/button.css');
+@import url('./components/modal.css');
+

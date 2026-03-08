@@ -1,0 +1,19 @@
+
+
+.btn__add__cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    width: 16.6rem;
+    height: 4.4rem;
+    border-radius: 999rem;
+    background-color: var(--white);
+    border: 0.1rem solid var(--rose-400);
+    position: absolute;
+    left: 50%;
+    bottom: -2rem;
+    transform: translateX(-50%);
+}
+
+

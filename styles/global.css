@@ -1,0 +1,24 @@
+
+
+body{
+    background-color: var(--rose-50);
+    font-family: var(--ff-base);
+    font-size: 1.6rem;
+    color: var(--rose-900);
+}
+
+.container{
+    padding: 2.4rem;
+    display: flex;
+    gap: 3.2rem;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 120%;
+    text-align: left;
+    color: var(--rose-900);
+}
+
