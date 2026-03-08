@@ -1,4 +1,10 @@
 
+.button__cart{
+    position: absolute;
+    left: 50%;
+    bottom: -2rem;
+    transform: translateX(-50%);
+}
 
 .btn__add__cart{
     display: flex;
@@ -10,10 +16,68 @@
     border-radius: 999rem;
     background-color: var(--white);
     border: 0.1rem solid var(--rose-400);
-    position: absolute;
-    left: 50%;
-    bottom: -2rem;
-    transform: translateX(-50%);
+    transition: all 300ms;
 }
 
+.btn__add__cart:hover{
+    color: var(--red);
+}
 
+.count__btn{
+    display: flex;
+    background-color: var(--red);
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.7rem;
+    width: 16.6rem;
+    height: 4.4rem;
+    border-radius: 999rem;
+}
+
+.decrement,
+.increment{
+    width: 2rem;
+    height: 2rem;
+    border: 0.1rem solid var(--white);
+    border-radius: 999rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms;
+    color: var(--white);
+}
+
+.decrement:hover,
+.increment:hover{
+    background-color: var(--white);
+    transition: all 300ms;
+}
+
+.decrement:hover,
+.increment:hover{
+    color: var(--red);
+    transition: all 300ms;
+}
+
+.count{
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: left;
+    color: var(--white);
+}
+
+[data-state="idle"] .add__cart {
+    display: flex;
+}   
+
+[data-state="active"] .add__cart {
+    display: none;
+} 
+
+[data-state="idle"] .count__btn {
+    display: none;
+}
+
+[data-state="active"] .count__btn {
+    display: flex;
+} 
