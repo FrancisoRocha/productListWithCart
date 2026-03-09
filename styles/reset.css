@@ -62,5 +62,6 @@ button {
     cursor: pointer;
     border: none;
     background: none;
+    outline: unset;
 }
 

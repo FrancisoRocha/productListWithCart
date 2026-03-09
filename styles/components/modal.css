@@ -1,0 +1,147 @@
+
+dialog{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 90vh;
+    padding: 4rem 2.4rem 2.4rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    border: none;
+    border-radius: 1.2rem 1.2rem 0 0;
+    margin: 14rem 0rem 0rem 0rem;
+    overflow-y: auto;
+}
+
+dialog::backdrop {
+    background-color: var(--hover-dark);
+}
+
+.title__info{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: baseline;
+}
+
+.title__modal{
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--rose-900);
+    text-align: left;
+    line-height: 100%;
+}
+
+.text__modal{
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: left;
+    color: var(--rose-500);
+}
+
+.confirmed__items{
+    background-color: var(--rose-50);
+    border-radius: 0.8rem;
+    padding: 2.4rem;
+}
+
+.item__container__products{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item__products__img img{
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 0.4rem;
+}
+
+.item__product{
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: left;
+    color: var(--rose-900);
+}
+
+.item__quantity__price{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.item__product__number{
+    color: var(--red);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.item__product__price{
+    color: var(--rose-500);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.product__total{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--rose-900);
+    text-align: left;
+}
+
+.confirmed__item li{
+    border-bottom: 0.1rem solid var(--rose-100);
+    padding: 1.5rem;
+}
+
+.confirmed__item li:last-child{
+    border-bottom: none;
+}
+
+.items__total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total__products__item{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--rose-900);
+    text-align: left;
+}
+
+.price__products__item{
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--rose-900);
+    text-align: left;
+}
+
+.btn__new__order{
+    margin-top: auto;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 100%;
+    height: 5.3rem;
+    border-radius: 999rem;
+    border: none;
+    transition: all 300ms;
+}
+
+.btn__new__order:hover{
+    background-color: hsl(14, 98%, 17%);
+}
+
+@media(min-width: 768px){
+    dialog{
+        width: 60rem;
+        border-radius: 1.2rem;
+        margin: auto;
+    }
+}

@@ -28,6 +28,9 @@
     /* WHITE */
     --white: #ffffff;
 
+    /* MODAL */
+    --hover-dark: rgba(0, 0, 0, 0.5);
+
     /* FONTS */
     --ff-base: 'Red Hat Text', sans-serif;
     --fw-regular: 400;
