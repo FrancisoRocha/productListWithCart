@@ -153,11 +153,11 @@
 }
 
 [data-state="idle"] .placeholder{
-    display: none;
+    display: flex;
 }
 
 [data-state="idle"] .added__items{
-    display: flex;
+    display: none;
 }
 
 [data-state="active"] .placeholder{
