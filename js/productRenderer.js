@@ -60,7 +60,9 @@ export async function productRender() {
             </div>
         </li>`;
     }).join('');
+    return products;
 }
+
 
 
 
