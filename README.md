@@ -1,6 +1,6 @@
 # Frontend Mentor - Product list with cart solution
 
-This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Product list with cart challenge on Frontend Mentor](https://product-list-with-cart-orcin-five.vercel.app/). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -30,12 +30,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./preview.jpg)
+![](./design/preview.jpg)
 
 ### Links
 
-- Solution URL: Add solution URL here
-- Live Site URL: Add live site URL here
+- Solution URL: [Product List with cart](https://github.com/FrancisoRocha?tab=repositories)
+- Live Site URL: [Product list with cart](https://product-list-with-cart-orcin-five.vercel.app/)
 
 ## My process
 
@@ -109,5 +109,5 @@ This approach helped me actually understand the code I was writing instead of ju
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- GitHub - [@yourusername](https://github.com/yourusername)
+- Frontend Mentor - [@FrancisoRocha](https://www.frontendmentor.io/profile/FrancisoRocha)
+- GitHub - [@FrancisoRocha](https://github.com/FrancisoRocha)
