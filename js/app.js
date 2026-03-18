@@ -1,4 +1,5 @@
-import { addToCart, decrementQuantity, getCart, incrementQuantity, removeFromCart, renderCart } from "./cart.js";
+import { addToCart, clearCart, decrementQuantity, getCart, incrementQuantity, removeFromCart, renderCart } from "./cart.js";
+import { closeModal, openModal, playCelebration } from "./modal.js";
 import { productRender } from "./productRenderer.js"
 
 
@@ -57,6 +58,12 @@ document.addEventListener('DOMContentLoaded', async() => {
             buttons.dataset.state = "idle";
         }
 
+        // Borde en la imagen cuando el producto está en carrito
+        const img = li.querySelector('.img__product');
+        if(img){
+            img.classList.toggle('is-selected', getCart().has(id));
+        }
+
     })
 
     //Delete Product the Container__cart
@@ -83,10 +90,52 @@ document.addEventListener('DOMContentLoaded', async() => {
             if(countEl){
                 countEl.textContent = '0';
             }
+            const img = productLi.querySelector('.img__product');
+            if(img){
+                img.classList.remove('is-selected');
+            }
         }
 
     })
 
+    //Open Modal
+    const buttonOpenModal = document.querySelector('.btn__confirm__order');
+    buttonOpenModal.addEventListener("click", (e) => {
+        e.preventDefault();
+        openModal()
+    })
+
+    const buttonCloseModal = document.querySelector('.btn__new__order');
+    buttonCloseModal.addEventListener("click", (e) => {
+        e.preventDefault();
+        // Cerrar primero: el backdrop nativo del <dialog> tapa cualquier animación del body
+        closeModal();
+
+        buttonCloseModal.disabled = true;
+        playCelebration();
+
+        window.setTimeout(() => {
+            clearCart();
+
+            // Resetear UI de las cards (botón y contador) al iniciar nuevo pedido
+            document.querySelectorAll('.product__container [data-id]').forEach((productLi) => {
+                const buttons = productLi.querySelector('.button__cart');
+                if(buttons){
+                    buttons.dataset.state = "idle";
+                }
+                const countEl = productLi.querySelector('.count');
+                if(countEl){
+                    countEl.textContent = '0';
+                }
+                const img = productLi.querySelector('.img__product');
+                if(img){
+                    img.classList.remove('is-selected');
+                }
+            });
+
+            buttonCloseModal.disabled = false;
+        }, 2000);
+    })
 
 })
 

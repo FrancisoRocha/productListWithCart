@@ -18,6 +18,11 @@
     border-radius: 0.8rem;
 }
 
+.img__product.is-selected{
+    outline: 0.2rem solid #C73B0F;
+    outline-offset: -0.2rem;
+}
+
 .item__info{
     display: flex;
     flex-direction: column;

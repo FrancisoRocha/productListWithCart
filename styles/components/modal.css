@@ -5,7 +5,6 @@ dialog{
     height: auto;
     max-height: 90vh;
     padding: 4rem 2.4rem 2.4rem 2.4rem;
-    display: flex;
     flex-direction: column;
     gap: 3.2rem;
     border: none;
@@ -14,8 +13,70 @@ dialog{
     overflow-y: auto;
 }
 
+/* Importante:
+   No fuerces el dialog visible siempre.
+   El <dialog> solo debe mostrarse cuando tiene el atributo [open]. */
+dialog:not([open]){
+    display: none;
+}
+
+dialog[open]{
+    display: flex;
+}
+
 dialog::backdrop {
     background-color: var(--hover-dark);
+}
+
+/* Confetti + toast */
+.confetti-layer{
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.confetti-piece{
+    position: absolute;
+    top: -10vh;
+    left: calc(var(--x) * 1%);
+    width: 0.9rem;
+    height: 1.4rem;
+    background: hsl(var(--h) 90% 55%);
+    border-radius: 0.2rem;
+    transform: rotate(calc(var(--r) * 1deg));
+    animation: confetti-fall calc(var(--d) * 1ms) ease-in forwards;
+    animation-delay: calc(var(--delay) * 1ms);
+}
+
+.confetti-toast{
+    position: fixed;
+    left: 50%;
+    top: 2.2rem;
+    transform: translateX(-50%);
+    padding: 1.2rem 1.8rem;
+    border-radius: 999rem;
+    background: var(--white);
+    color: var(--rose-900);
+    font-size: 1.6rem;
+    font-weight: 800;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.12);
+    opacity: 0;
+    animation: toast-pop 2000ms ease-out forwards;
+    z-index: 10000;
+}
+
+@keyframes confetti-fall{
+    0% { transform: translateY(0) rotate(calc(var(--r) * 1deg)); opacity: 1; }
+    100% { transform: translateY(120vh) rotate(calc(var(--r) * 6deg)); opacity: 0; }
+}
+
+@keyframes toast-pop{
+    0% { opacity: 0; transform: translateX(-50%) translateY(-0.8rem); }
+    15% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    80% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-0.8rem); }
 }
 
 .title__info{
